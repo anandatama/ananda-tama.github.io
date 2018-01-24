@@ -1,2 +1,2 @@
-# ananda-tama.github.io
+# anandatama.github.io
 Personal Page
