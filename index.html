@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	 	<title>Ananda Vickry Pratama</title>
+		<meta name="description" content="Ananda Vickry Pratama: I am Programmer from Indonesia">
+		<meta name="keywords" content="AnaKnda Vickry Pratama">
+		<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+		<link rel="shortcut icon" href="code.ico" type="image/x-icon"/>
+	</head>
+	<body>
+
+<div id="header">
+	<span id="head">$ </span><span id="dynamic-editor"></span><span class="cursor">_</span>
+</div>
+
+<div id="content">
+	<div class="container">
+		<div id="bar">
+			<div class="icon icon-red"></div>
+			<div class="icon icon-yellow"></div>
+			<div class="icon icon-green"></div>
+		</div>
+
+		<div id="screen">
+			<div id="innercontent">
+				<div id="contentheader">INTRO</div>
+
+				<div class="topic_header">NAME</div>
+				<div class="topic_text">
+					Ananda Vickry Pratama
+				</div>
+
+				<div class="topic_header">NICK(S)</div>
+				<div class="topic_text">
+					Nanda
+				</div>
+
+				<div class="topic_header">DESCRIPTION</div>
+				<div class="topic_text">
+					Mager Coder. Currently student on UIN Jakarta<br> 
+				</div>
+
+
+				<div class="topic_header">CONTACT METHODS</div>
+				<div class="topic_text">
+					<p>email - anandapratama170199@gmail.com</p> 
+				</div>
+
+				<div class="topic_header">PROJECTS</div>
+				<div class="topic_text">
+					Some of the projects I have done:
+					<ul>
+					<li><a href="https://github.com/anandatama/contact-list" target="_blank">contact-list</a> - A simple contact list that can to add or delete contacts</li>
+					<li><a href="https://github.com/anandatama/todo-rest-api" target="_blank">todo-list </a> - A simple todo-list to help discipline your routines</li>
+					<li><a href="https://github.com/anandatama/ngopract-labs" target="_blank" >ngoprack-labs </a> - Ngopract labs is a simple playground about coding learning also as 'ngoprek'
+					</li>
+					</ul>
+				</div>
+
+				<div class="topic_header">CURRENTLY SKILLS</div>
+				<div class="topic_text">
+					<ul>
+					 	<li>HTML5</li>
+					 	<li>CSS3</li>
+					 	<li>Vanilla JS</li>
+					 	<li>Bootstrap</li>
+					 	<li>NodeJS</li>
+					 	<li>Git</li>
+					 </ul> 
+				</div>
+
+				<div id="innerfooter">
+					Latest Update - 01/21/2018 V-01-0
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="footer">
+	<div class="wrapper">
+		<div class="social-icons">
+			<a href="https://github.com/anandatama" target="_blank"><i class="fa fa-github fa-3x" aria-hidden="true"></i>
+			<a href="https://www.linkedin.com/in/ananda-vickry-pratama-160b19130/" target="_blank"><i class="fa fa-linkedin fa-3x" aria-hidden="true"></i></a>
+			<a href="https://www.instagram.com/anandatama/" target="_blank"><i class="fa fa-instagram fa-3x" aria-hidden="true"></i></a>
+			<a href="https://web.facebook.com/ananda.vickrypratama" target="_blank"><i class="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+		</div>
+
+	<script>
+		var dynamicEditorElem = document.getElementById('dynamic-editor');
+
+		var textArr = [
+			"Hello!",
+			"My Name is Ananda Vickry Pratama"
+		];
+
+		var maximumSentences = textArr.length;
+
+      	var sentence = 0;
+     	var sentenceCounter = 0;
+
+      	function cursorType() {
+      		dynamicEditorElem.innerHTML += textArr[sentence][sentenceCounter];
+      		sentenceCounter++;
+      		if(sentenceCounter === textArr[sentence].length) {
+      			setTimeout(function() {
+      				removeText();
+      			}, 3000);
+      			return false;
+      		}
+      		setTimeout(function() {
+      			cursorType();
+      		}, 100);
+      	}
+
+      	function removeText() {
+      		dynamicEditorElem.style.background = "#666";
+      		setTimeout(function() {
+      			dynamicEditorElem.innerHTML = "";
+      			setTimeout(function() {
+      				dynamicEditorElem.style.background = "transparent";
+      				sentence++;
+      				sentenceCounter = 0;
+      				if(sentence === maximumSentences) {
+      					sentence = 0;
+      				}
+      				cursorType();
+      			}, 500);
+        	}, 1000);
+      	}
+      	cursorType();
+
+	</script>
+	</body>
+</html>
